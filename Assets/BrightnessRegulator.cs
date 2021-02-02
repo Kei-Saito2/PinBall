@@ -38,7 +38,7 @@ public class BrightnessRegulator : MonoBehaviour
     {
         if(this.degree >= 0)
         {
-            Color emissionColor = this.defaultColor * (this.minEmission = Mathf.Sin(this.degree * Mathf.Deg2Rad) * magEmission);
+            Color emissionColor = this.defaultColor * (this.minEmission + Mathf.Sin(this.degree * Mathf.Deg2Rad) * magEmission);
 
             myMaterial.SetColor("_EmissionColor", emissionColor);
 
